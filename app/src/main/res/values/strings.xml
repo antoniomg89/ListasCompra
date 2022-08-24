@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">ListasCompra</string>
     <string name="web_application_client_id">203484881875-0nhsa65713qog0dmb4g0f7ggv4uap4fn.apps.googleusercontent.com</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_up">Registrarse</string>
+    <string name="productos">Productos</string>
 </resources>

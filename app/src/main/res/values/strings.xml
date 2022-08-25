@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ListasCompra</string>
+    <string name="app_name">ListasApp</string>
     <string name="web_application_client_id">203484881875-0nhsa65713qog0dmb4g0f7ggv4uap4fn.apps.googleusercontent.com</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
@@ -16,4 +16,8 @@
     <string name="action_sign_in">Entrar</string>
     <string name="action_sign_up">Registrarse</string>
     <string name="productos">Productos</string>
+    <string name="listas">Listas</string>
+    <string name="nombre_app">Listas de compra</string>
+    <string name="login_correo">Entra o regístrate con tu email</string>
+    <string name="login_google">Entra o regístrate con Google</string>
 </resources>

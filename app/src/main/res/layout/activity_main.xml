@@ -8,15 +8,58 @@
 
     <TextView
         android:id="@+id/textViewMainActivityProductos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"
+        android:padding="5dp"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/playfairdisplaysemibolditalic"
+        android:elevation="5dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
         android:text="@string/productos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewProductos"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMainActivityProductos"
+        app:srcCompat="@drawable/alimentacion2" />
+
+    <TextView
+        android:id="@+id/textViewMainActivityLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="5dp"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/playfairdisplaysemibolditalic"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="@string/listas"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProductos" />
+
+    <ImageView
+        android:id="@+id/imageViewListas"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMainActivityLista"
+        app:srcCompat="@drawable/lista" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

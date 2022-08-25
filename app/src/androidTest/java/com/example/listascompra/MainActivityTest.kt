@@ -1,11 +1,11 @@
 package com.example.listascompra
 
 
+import android.widget.ImageView
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.Matchers.allOf
@@ -22,16 +22,48 @@ class MainActivityTest {
     var mActivityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
-    fun mainActivityTest() {
-        val textView = onView(
+    fun textViewProductosTest() {
+        val textViewProductos = onView(
             allOf(
                 withId(R.id.textViewMainActivityProductos),
-                //withText("CY8RReL7orU5fFqSniLIVfAGf822"),
-                ViewMatchers.withParent(ViewMatchers.withParent(withId(android.R.id.content))),
-                ViewMatchers.isDisplayed()
+                isDisplayed()
             )
         )
-        //textView.check(matches(withText(containsString("Productos"))))
-        textView.check(matches(withText("Productos")))
+        textViewProductos.check(matches(withText("Productos")))
+    }
+
+    @Test
+    fun textViewListasTest() {
+        val textViewListas = onView(
+            allOf(
+                withId(R.id.textViewMainActivityLista),
+                isDisplayed()
+            )
+        )
+        textViewListas.check(matches(withText("Listas")))
+
+    }
+
+    @Test
+    fun imageviewProductosTest() {
+        val imageviewProductos = onView(
+            allOf(
+                withId(R.id.imageViewProductos),
+                isDisplayed()
+            )
+        )
+        imageviewProductos.check(matches(isDisplayed()))
+
+    }
+
+    @Test
+    fun imageviewListasTest() {
+        val imageviewListas = onView(
+            allOf(
+                withId(R.id.imageViewListas),
+                isDisplayed()
+            )
+        )
+        imageviewListas.check(matches(isDisplayed()))
     }
 }

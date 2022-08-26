@@ -20,4 +20,12 @@
     <string name="nombre_app">Listas de compra</string>
     <string name="login_correo">Entra o regístrate con tu email</string>
     <string name="login_google">Entra o regístrate con Google</string>
+    <string name="higiene_limpieza">Higiene y limpieza</string>
+    <string name="pastas_arroces">Pastas y arroces</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="carnes">Carnes</string>
+    <string name="conservas">Conservas</string>
+    <string name="frutas_verduras">Frutas y verduras</string>
+    <string name="lacteos">Lácteos</string>
+    <string name="legumbres">Legumbres</string>
 </resources>

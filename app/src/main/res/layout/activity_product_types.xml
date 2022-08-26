@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".ProductTypesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
+            android:gravity="center"
+            android:background="@color/cardview_shadow_end_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_higiene_limpieza"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/higiene_limpieza"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_higiene_limpieza"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/higieneylimpieza"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_bebidas"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/bebidas"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_bebidas"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/bebidas"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/white"
+                    android:elevation="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_pasta_arroces"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/pastas_arroces"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_pasta_arroces"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/pastasyarroces"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_carnes"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/carnes"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_carnes"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/carnes"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_frutas_verduras"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/frutas_verduras"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_frutas_verduras"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/frutasyverduras"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_lacteos"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/lacteos"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_lacteos"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/lacteos"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_legumbres"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/legumbres"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_legumbres"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/legumbres"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_conservas"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/playfairdisplayblack"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/conservas"/>
+
+                    <ImageView
+                        android:id="@+id/imageview_conservas"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/conservas"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

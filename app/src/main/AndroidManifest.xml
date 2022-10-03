@@ -11,8 +11,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ListasCompra"
-        tools:targetApi="31">
+        android:theme="@style/AppTheme"
+        tools:targetApi="33">
+        <activity
+            android:name=".ProductListActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ShoppingListsActivity"
+            android:exported="false" />
         <activity
             android:name=".ProductTypesActivity"
             android:exported="false"

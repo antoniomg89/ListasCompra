@@ -3,10 +3,12 @@ package com.example.listascompra
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.View.inflate
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.listascompra.databinding.ActivityLoginBinding
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -18,13 +20,13 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_login.*
 import org.w3c.dom.Text
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var user: String
     private val SIGN_IN_CODE = 310
+    private lateinit var binding: ActivityLoginBinding
     /*private lateinit var constraintLayout: ConstraintLayout
     private lateinit var buttonSignIn: Button
     private lateinit var buttonSignUp: Button
@@ -38,7 +40,9 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         //constraintLayout = findViewById(R.id.activity_login_cl)
         //buttonSignUp = findViewById(R.id.button_sign_up)
@@ -47,9 +51,9 @@ class LoginActivity : AppCompatActivity() {
         //textviewPassword = findViewById(R.id.textview_password)
         auth = Firebase.auth
 
-        button_sign_up.setOnClickListener(View.OnClickListener {
-            if(textview_username.text.isNotEmpty() && textview_password.text.isNotEmpty()) {
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(textview_username.text.toString(),textview_password.text.toString())
+        binding.buttonSignUp.setOnClickListener(View.OnClickListener {
+            if(!binding.textviewUsername.text.isNullOrEmpty() && !binding.textviewPassword.text.isNullOrEmpty()) {
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(binding.textviewUsername.text.toString(),binding.textviewPassword.text.toString())
                     .addOnCompleteListener(OnCompleteListener {
                         if (it.isSuccessful) {
                             //user = auth.currentUser?.uid.toString()
@@ -62,10 +66,9 @@ class LoginActivity : AppCompatActivity() {
             }
         })
 
-
-        button_login.setOnClickListener(View.OnClickListener {
-            if(textview_username.text.isNotEmpty() && textview_password.text.isNotEmpty()) {
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(textview_username.text.toString(),textview_password.text.toString())
+        binding.buttonLogin.setOnClickListener(View.OnClickListener {
+            if(binding.textviewUsername.text.isNullOrEmpty() && !binding.textviewPassword.text.isNullOrEmpty()) {
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(binding.textviewUsername.text.toString(),binding.textviewPassword.text.toString())
                     .addOnCompleteListener(OnCompleteListener {
                         if (it.isSuccessful) {
                             //user = auth.currentUser?.uid.toString()
@@ -78,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
             }
         })
 
-        button_google.setOnClickListener(View.OnClickListener {
+        binding.buttonGoogle.setOnClickListener(View.OnClickListener {
             val googleConfig = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -105,7 +108,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showViews() {
-        activity_login_cl.visibility = View.VISIBLE
+        //activity_login_cl.visibility = View.VISIBLE
+        binding.activityLoginCl.visibility = View.VISIBLE
     }
 
     private fun mainActivity() {

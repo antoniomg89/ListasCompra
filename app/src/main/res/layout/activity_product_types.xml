@@ -4,284 +4,479 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@color/main_background"
     tools:context=".ProductTypesActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            android:gravity="center"
             android:orientation="vertical"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp"
-            android:gravity="center"
-            android:background="@color/cardview_shadow_end_color">
+            tools:layout_editor_absoluteY="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
+                android:orientation="horizontal"
                 tools:layout_editor_absoluteX="1dp"
                 tools:layout_editor_absoluteY="1dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardHigieneLimpieza"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_higiene_limpieza">
 
-                    <TextView
-                        android:id="@+id/textview_higiene_limpieza"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/higiene_limpieza"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_higiene_limpieza"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/higieneylimpieza"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_higiene_limpieza"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_higieneylimpieza"
+                            android:contentDescription="@string/higiene_limpieza" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_higiene_limpieza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/higiene_limpieza"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardEmbutidos"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_embutidos">
 
-                    <TextView
-                        android:id="@+id/textview_bebidas"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/bebidas"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_bebidas"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/bebidas"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_embutidos"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_embutidos"
+                            android:contentDescription="@string/higiene_limpieza" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_embutidos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/embutidos"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
                 tools:layout_editor_absoluteX="1dp"
                 tools:layout_editor_absoluteY="1dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFrutasVerduras"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/white"
-                    android:elevation="15dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_frutas_verduras">
 
-                    <TextView
-                        android:id="@+id/textview_pasta_arroces"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/pastas_arroces"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_pasta_arroces"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/pastasyarroces"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_frutas_verduras"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_frutasyverduras"
+                            android:contentDescription="@string/frutas_verduras" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_frutas_verduras"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/frutas_verduras"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardConservas"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_conservas">
 
-                    <TextView
-                        android:id="@+id/textview_carnes"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/carnes"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_carnes"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/carnes"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_conservas"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_conservas"
+                            android:contentDescription="@string/conservas" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_conservas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/conservas"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
                 tools:layout_editor_absoluteX="1dp"
                 tools:layout_editor_absoluteY="1dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCarnes"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_carnes">
 
-                    <TextView
-                        android:id="@+id/textview_frutas_verduras"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/frutas_verduras"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_frutas_verduras"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/frutasyverduras"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_carnes"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_carnes"
+                            android:contentDescription="@string/carnes" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_carnes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/carnes"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLacteos"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_lacteos">
 
-                    <TextView
-                        android:id="@+id/textview_lacteos"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/lacteos"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_lacteos"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/lacteos"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_lacteos"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_lacteos"
+                            android:contentDescription="@string/lacteos" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_lacteos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lacteos"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
                 tools:layout_editor_absoluteX="1dp"
                 tools:layout_editor_absoluteY="1dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLegumbres"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_legumbres">
 
-                    <TextView
-                        android:id="@+id/textview_legumbres"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/legumbres"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_legumbres"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/legumbres"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_legumbres"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_legumbres"
+                            android:contentDescription="@string/legumbres" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_legumbres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/legumbres"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPastasArroces"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:background="@color/white"
-                    android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardElevation="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:transitionName="shared_element_container_especias">
 
-                    <TextView
-                        android:id="@+id/textview_conservas"
-                        android:layout_width="160dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/playfairdisplayblack"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="@string/conservas"/>
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageview_conservas"
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/conservas"/>
+                        <!-- Media -->
+                        <ImageView
+                            android:id="@+id/imageview_especias"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/menu_especias"
+                            android:contentDescription="@string/especias" />
 
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:id="@+id/textview_especias"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/especias"
+                                android:textSize="21sp"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 

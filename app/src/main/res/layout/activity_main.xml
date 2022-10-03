@@ -1,66 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/main_background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewMainActivityProductos"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardProductos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="@color/teal_200"
-        android:fontFamily="@font/playfairdisplaysemibolditalic"
-        android:elevation="5dp"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:text="@string/productos"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:transitionName="shared_element_container_productos">
 
-    <ImageView
-        android:id="@+id/imageViewProductos"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="25dp"
-        android:elevation="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMainActivityProductos"
-        app:srcCompat="@drawable/alimentacion2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewMainActivityLista"
+            <!-- Media -->
+            <ImageView
+                android:id="@+id/imageViewProductos"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/menu_alimentacion2"
+                android:contentDescription="@string/productos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:id="@+id/textViewMainActivityProductos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/productos"
+                    android:textSize="25sp"
+                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardListas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:padding="5dp"
-        android:background="@color/teal_200"
-        android:fontFamily="@font/playfairdisplaysemibolditalic"
-        android:elevation="5dp"
-        android:gravity="center"
-        android:text="@string/listas"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        app:cardElevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProductos" />
+        android:transitionName="shared_element_container_listas">
 
-    <ImageView
-        android:id="@+id/imageViewListas"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:elevation="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMainActivityLista"
-        app:srcCompat="@drawable/lista" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+            <ImageView
+                android:id="@+id/imageViewListas"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:contentDescription="@string/listas"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/menu_hoja" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:id="@+id/textViewMainActivityLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/listas"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
